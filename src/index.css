@@ -65,6 +65,9 @@ nav{
     display: flex;
     gap: 1rem;
   }
+  li{
+    list-style: none;
+  }
   a{
     text-decoration: none;
     font-size: 1.15rem;
@@ -74,10 +77,14 @@ nav{
 
 .inactive{
   color: #1c1c1c;
+  list-style: none;
+  text-decoration: none;
 }
 .active{
   color: #476a2e;
   font-weight: 600;
+  text-decoration: none;
+  list-style: none;
 }
 
 form{
@@ -172,10 +179,15 @@ form input{
       text-decoration: none;
       list-style: none;
     }
+    li{
+      list-style: none;
+    }
     ul{
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
+      list-style: none;
+      text-decoration: none;
     }
   }
 
