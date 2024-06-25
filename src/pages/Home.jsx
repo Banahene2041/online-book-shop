@@ -1,7 +1,9 @@
-import React from 'react'
 import Popular from '../components/Popular'
 import RatedBooks from '../components/RatedBooks'
 import Genres from '../components/Genres'
+import Kids from '../components/Children'
+import Fashion from '../components/Fashion'
+import Education from '../components/Education'
 
 function Home() {
   return (
@@ -9,6 +11,9 @@ function Home() {
       <Genres />
       <RatedBooks />
       <Popular />
+      <Education />
+      <Kids />
+      <Fashion />
     </section>
   )
 }

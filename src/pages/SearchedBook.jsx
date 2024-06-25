@@ -10,7 +10,7 @@ function SearchedBook() {
     const getSearchItem = async() => {
       setLoading(true)
       try {
-        const resp = await fetch(`https://api.bigbookapi.com/search-books?api-key=dbdd5d03907547738ca0fe1c2377ee50&query=${search}`)
+        const resp = await fetch(`https://api.bigbookapi.com/search-books?api-key=03e9ed09e7e04ae3a5042375aca3757e&query=${search}`)
         const data = await resp.json()
         setBooks(data.books)
         setLoading(false)
@@ -40,15 +40,15 @@ function SearchedBook() {
       <div className='key-container'>
         <h3>your search <span className='search-key'>"{search}"</span></h3>
       </div>
-      <div className='article article-center'>
+      <div className='search-main-div'>
         {
             books.map((outerBook) => {
                 return outerBook.map((innerBook) => {
-                    return <div key={innerBook.id} className='book-item'>
-                        <div className="img-container">
+                    return <div key={innerBook.id} className='single-search'>
+                        <div className="search-img-container">
                             <Link to={`/singlebook/${innerBook.id}`}><img src={innerBook.image} alt="" /></Link>
                         </div>
-                        <h6>{innerBook.subtitle}</h6>
+                          <h6>{innerBook.subtitle}</h6>
                         <h5>{innerBook.title}</h5>
                     </div>
                 })

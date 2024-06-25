@@ -3,36 +3,27 @@ import { Link } from 'react-router-dom'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
 
-const url = `https://api.bigbookapi.com/search-books?api-key=03e9ed09e7e04ae3a5042375aca3757e&number=10`
-function Popular() {
-    const [popular, setPopular] = useState([])
-    const [loading,setLoading] = useState(true)
-
-    const getPopular = async() => {
-        setLoading(true)
+const url = `https://api.bigbookapi.com/search-books?api-key=03e9ed09e7e04ae3a5042375aca3757e&genres=education&number=15`
+function Education() {
+    const [education, setEducation] = useState([])
+    
+    const getEducation = async() => {
         try {
             const response = await fetch(url)
             const data = await response.json()
-            setPopular(data.books)
-            setLoading(false)
+            setEducation(data.books)
         } catch (error) {
             console.log(error) 
         }
     }
 
     useEffect(() => {
-        getPopular()
+        getEducation()
     },[])
-
-    if (loading){
-        return <div className='loading'>
-            <h3>Loading...</h3>
-        </div>
-    }
   return (
     <div className='wrapper'>
         <div className='direct-container'>
-            <Link to={`/genre/novel`} className='link-direct'>popular</Link>
+            <Link to={`/genre/education`} className='link-direct'>education</Link>
         </div>
     <Splide
     options={{
@@ -58,7 +49,7 @@ function Popular() {
             }}
      className='popular-main'>
         {
-            popular.map((outerBook) => {
+            education.map((outerBook) => {
                 return outerBook.map((innerBook) => {
                     return <SplideSlide key={innerBook.id} className='book-item'>
                         <div className="img-container">
@@ -74,4 +65,4 @@ function Popular() {
   )
 }
 
-export default Popular
+export default Education
