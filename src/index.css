@@ -615,7 +615,6 @@ form input::placeholder{
 }
 .search-main-div{
   padding-inline: 3%;
-  border: 2px solid red;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.8rem;
@@ -628,7 +627,7 @@ form input::placeholder{
   flex-direction: column;
   border-radius: .2rem;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-  background: #fff;
+  background: #eceaea;
   padding: 1rem;
   h6{
     margin-top: .7rem;

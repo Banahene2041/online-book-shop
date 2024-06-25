@@ -8,8 +8,11 @@ function Search() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    navigate(`/book/${searchTerm}`)
-    setSearchTerm("")
+    if (searchTerm){
+      navigate(`/book/${searchTerm}`)
+      setSearchTerm("")
+    }
+      setSearchTerm("")
   }
 
   return (
