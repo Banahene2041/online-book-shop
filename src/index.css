@@ -138,7 +138,7 @@ form input{
     font-size: .5rem;
     width: 1.5rem;
     height: 3.6vh;
-    top: 1.65rem;
+    top: 1.55rem;
   }
   nav{
     display: flex;
@@ -169,6 +169,8 @@ form input{
     transition: .5s ease-in-out;
     a{
       font-size: .94rem;
+      text-decoration: none;
+      list-style: none;
     }
     ul{
       display: flex;
