@@ -12,7 +12,7 @@ function GenreBook() {
   const getGenre =  async () => {
     setLoading(true)
     try {
-      const resp = await fetch(`https://api.bigbookapi.com/search-books?api-key=03e9ed09e7e04ae3a5042375aca3757e&genres=${name}&number=20`)
+      const resp = await fetch(`https://api.bigbookapi.com/search-books?api-key=5cd7124dd60247ec8039747e7b085baa&genres=${name}&number=20`)
       const data = await resp.json()
       setGenreBook(data.books)
       setLoading(false)

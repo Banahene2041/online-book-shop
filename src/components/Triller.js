@@ -5,7 +5,7 @@ import Title from './Title'
 import { Link } from 'react-router-dom'
 
 
-const url = 'https://api.bigbookapi.com/search-books?api-key=03e9ed09e7e04ae3a5042375aca3757e&genres=sports&number=10'
+const url = 'https://api.bigbookapi.com/search-books?api-key=5cd7124dd60247ec8039747e7b085baa&genres=sports&number=10'
 
 function Triller() {
     const [rated,setRated] = useState([])
@@ -42,8 +42,10 @@ function Triller() {
                     },
                     480:{
                         perPage:1,
-                        arrows:true,
                         gap: "1.5rem",
+                        autoplay: true,
+                        pagination:true,
+                        autoplayInterval: 2000,
                     }
                 }
             }} className="slide" >

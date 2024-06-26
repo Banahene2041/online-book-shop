@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
 
-const url = `https://api.bigbookapi.com/search-books?api-key=03e9ed09e7e04ae3a5042375aca3757e&number=10`
+const url = `https://api.bigbookapi.com/search-books?api-key=5cd7124dd60247ec8039747e7b085baa&number=10`
 function Popular() {
     const [popular, setPopular] = useState([])
     const [loading,setLoading] = useState(true)
@@ -38,8 +38,9 @@ function Popular() {
     options={{
                 perPage: 4,
                 arrows: true,
-                arrowStyle: {
-                    backgroundColor: '#0376b8',
+                arrowColor:{
+                    next: "#0376b8",
+                    prev: "#0376b8"
                 },
                 pagination: true,
                 drag: "free",

@@ -4,7 +4,7 @@ import "@splidejs/splide/dist/css/splide.min.css"
 import Title from './Title'
 import { Link } from 'react-router-dom'
 
-const url = 'https://api.bigbookapi.com/search-books?api-key=03e9ed09e7e04ae3a5042375aca3757e&max-rating=0.9&number=8'
+const url = 'https://api.bigbookapi.com/search-books?api-key=5cd7124dd60247ec8039747e7b085baa&max-rating=0.9&number=8'
 function RatedBooks() {
     const [rated,setRated] = useState([])
 
@@ -28,10 +28,12 @@ function RatedBooks() {
             <Splide
             options={{
                 perPage: 4,
+                rewind: true,
                 arrows:false,
                 pagination: false,
                 drag: "free",
                 gap: "2rem",
+                autoplay: true,
                 responsvie:true,
                 breakpoints:{
                     768:{
@@ -39,8 +41,9 @@ function RatedBooks() {
                     },
                     480:{
                         perPage:1,
-                        arrows: true,
                         gap: "1.5rem",
+                        autoplay: true,
+                        autoplayInterval: 2000,
                     }
                 }
             }} className="slide" >

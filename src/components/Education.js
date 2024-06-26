@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
 
-const url = `https://api.bigbookapi.com/search-books?api-key=03e9ed09e7e04ae3a5042375aca3757e&genres=education&number=15`
+const url = `https://api.bigbookapi.com/search-books?api-key=5cd7124dd60247ec8039747e7b085baa&genres=education&number=15`
 function Education() {
     const [education, setEducation] = useState([])
     
@@ -29,9 +29,7 @@ function Education() {
     options={{
                 perPage: 4,
                 arrows: true,
-                arrowStyle: {
-                    backgroundColor: '#0376b8',
-                },
+                arrowClassName: 'custom-arrow',
                 pagination: true,
                 drag: "free",
                 gap: "0rem",

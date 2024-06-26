@@ -12,7 +12,7 @@ function SingleBook() {
     const getSinglebook = async ()=> {
       setLoading(true)
       try {
-        const resp = await fetch(`https://api.bigbookapi.com/${id}?api-key=03e9ed09e7e04ae3a5042375aca3757e`)
+        const resp = await fetch(`https://api.bigbookapi.com/${id}?api-key=5cd7124dd60247ec8039747e7b085baa`)
         const data = await resp.json()
         setSinglebook(data)
         setLoading(false)
