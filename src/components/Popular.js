@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
 
-const url = `https://api.bigbookapi.com/search-books?api-key=59de79a3dbe84112bf9b41cdd81c6ce0&number=10`
 function Popular() {
     const [popular, setPopular] = useState([])
     const [loading,setLoading] = useState(true)
@@ -11,7 +10,7 @@ function Popular() {
     const getPopular = async() => {
         setLoading(true)
         try {
-            const response = await fetch(url)
+            const response = await fetch(`https://api.bigbookapi.com/search-books?api-key=${process.env.REACT_APP_API_KEY}&number=10`)
             const data = await response.json()
             setPopular(data.books)
             setLoading(false)

@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
 
-const url = `https://api.bigbookapi.com/search-books?api-key=59de79a3dbe84112bf9b41cdd81c6ce0&genres=fashion&number=20`
 function Fashion() {
     const [fashion, setFashion] = useState([])
     
     const getFashion = async() => {
         try {
-            const response = await fetch(url)
+            const response = await fetch(`https://api.bigbookapi.com/search-books?api-key=${process.env.REACT_APP_API_KEY}&genres=fashion&number=20`)
             const data = await response.json()
             setFashion(data.books)
         } catch (error) {

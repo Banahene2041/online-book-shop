@@ -4,15 +4,12 @@ import "@splidejs/splide/dist/css/splide.min.css"
 import Title from './Title'
 import { Link } from 'react-router-dom'
 
-
-const url = 'https://api.bigbookapi.com/search-books?api-key=59de79a3dbe84112bf9b41cdd81c6ce0&genres=sports&number=10'
-
 function Triller() {
     const [rated,setRated] = useState([])
 
     const getRated = async () => {
         try {
-            const resp = await fetch(url)
+            const resp = await fetch(`https://api.bigbookapi.com/search-books?api-key=${process.env.REACT_APP_API_KEY}&genres=sports&number=10`)
             const data = await resp.json()
             setRated(data.books)
         } catch (error) {

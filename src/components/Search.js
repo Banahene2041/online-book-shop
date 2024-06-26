@@ -18,7 +18,7 @@ function Search() {
   return (
     <form onSubmit={handleSubmit}>
         <div>
-            <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            <input type="text" autoComplete='off' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         </div>
         <button type="submit" className='search-btn'>
         <FaSearch />     

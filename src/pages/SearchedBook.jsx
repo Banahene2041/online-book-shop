@@ -10,7 +10,7 @@ function SearchedBook() {
     const getSearchItem = async() => {
       setLoading(true)
       try {
-        const resp = await fetch(`https://api.bigbookapi.com/search-books?api-key=59de79a3dbe84112bf9b41cdd81c6ce0&query=${search}`)
+        const resp = await fetch(`https://api.bigbookapi.com/search-books?api-key=${process.env.REACT_APP_API_KEY}&query=${search}`)
         const data = await resp.json()
         setBooks(data.books)
         setLoading(false)
