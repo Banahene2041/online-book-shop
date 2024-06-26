@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
 
-const url = `https://api.bigbookapi.com/search-books?api-key=5cd7124dd60247ec8039747e7b085baa&genres=fashion&number=20`
+const url = `https://api.bigbookapi.com/search-books?api-key=59de79a3dbe84112bf9b41cdd81c6ce0&genres=fashion&number=20`
 function Fashion() {
     const [fashion, setFashion] = useState([])
     

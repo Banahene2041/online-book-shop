@@ -4,7 +4,7 @@ import "@splidejs/splide/dist/css/splide.min.css"
 import Title from './Title'
 import { Link } from 'react-router-dom'
 
-const url = 'https://api.bigbookapi.com/search-books?api-key=5cd7124dd60247ec8039747e7b085baa&max-rating=0.9&number=8'
+const url = 'https://api.bigbookapi.com/search-books?api-key=59de79a3dbe84112bf9b41cdd81c6ce0&max-rating=0.9&number=8'
 function RatedBooks() {
     const [rated,setRated] = useState([])
 
