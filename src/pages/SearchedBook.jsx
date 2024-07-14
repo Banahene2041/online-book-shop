@@ -7,10 +7,12 @@ function SearchedBook() {
   const {search} = useParams()
 
   React.useEffect(() => {
-    const getSearchItem = async() => {
+    const getSearchItem = async () => {
       setLoading(true)
       try {
-        const resp = await fetch(`https://api.bigbookapi.com/search-books?api-key=${process.env.REACT_APP_API_KEY}&query=${search}`)
+        const resp = await fetch(
+          `https://api.bigbookapi.com/search-books?api-key=${process.env.REACT_APP_API_KEY}&query=${search}`
+        )
         const data = await resp.json()
         setBooks(data.books)
         setLoading(false)
@@ -20,19 +22,25 @@ function SearchedBook() {
     }
 
     getSearchItem()
+  }, [search])
 
-  },[search])
-
-  if (loading){
-    return <div className='loading'>
-      <h2>Loading...</h2>
-    </div>
+  if (loading) {
+    return (
+      <div className='loading'>
+        <h2>Loading...</h2>
+      </div>
+    )
   }
 
-  if (books.length < 1){
-    return <div className='no-search'>
-      <h3>No Item Matched your searched result <span className='search-key'>"{search}"</span></h3>
-    </div>
+  if (books.length < 1) {
+    return (
+      <div className='no-search empty-book'>
+        <h3>
+          No Item Matched your searched result
+          <span className='search-key'>"{search}"</span>
+        </h3>
+      </div>
+    )
   }
 
   return (

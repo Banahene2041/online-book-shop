@@ -610,17 +610,24 @@ form input::placeholder{
   }
 }
 
+@media (max-width: 700px){
+  .no-search{
+    font-size: .9rem;
+    text-align: center;
+  }
+}
+
 .no-search{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.2;
+  margin-top: 6rem;
+  color: black !important;
 }
 
   .search-key{
     font-style: italic;
-    color: #055482;
+    color: #055482 !important;
+    margin-left: .5rem;
   }
 .search-section{
   margin-top: 5rem;
