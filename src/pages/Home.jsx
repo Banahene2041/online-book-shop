@@ -3,8 +3,7 @@ import RatedBooks from '../components/RatedBooks'
 import Genres from '../components/Genres'
 import Kids from '../components/Children'
 import Fashion from '../components/Fashion'
-import Education from '../components/Education'
-
+import Education from "../components/Education"
 function Home() {
   return (
     <section className='section'>

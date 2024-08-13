@@ -107,6 +107,7 @@ form input{
   border-radius: .2rem;
   display: flex;
   align-items: center;
+  outline: none;
   justify-content: center;
   box-shadow: 1px 1.5px 2px rgba(0, 0, 0, 0.2);
 }
@@ -117,12 +118,12 @@ form input{
 
 .search-btn {
   position: absolute;
-  top: .88rem;
+  top: 0rem;
   font-size: .8rem;
   cursor: pointer;
   width: 2.5rem;
   height: 5.8vh;
-  right: 6%;
+  right: -1.5rem;
   color: #fff;
   display: flex;
   align-items: center;
@@ -146,11 +147,11 @@ form input{
   }
   .search-btn{
     position: absolute;
-    right: 2.5rem;
+    right: -1.5rem;
     font-size: .5rem;
     width: 1.5rem;
     height: 3.6vh;
-    top: 1.14rem;
+    top: 0.05rem;
   }
   nav{
     display: flex;
@@ -546,6 +547,9 @@ form input::placeholder{
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: .5s ease;
+}
+.search-container{
+  position: relative;
 }
 
 .main-btn:hover{

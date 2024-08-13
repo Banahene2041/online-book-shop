@@ -17,12 +17,17 @@ function Search() {
 
   return (
     <form onSubmit={handleSubmit}>
-        <div>
-            <input type="text" autoComplete='off' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-        </div>
-        <button type="submit" className='search-btn'>
-        <FaSearch />     
+      <div className='search-container'>
+        <input
+          type='text'
+          autoComplete='off'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button type='submit' className='search-btn'>
+          <FaSearch />
         </button>
+      </div>
     </form>
   )
 }
