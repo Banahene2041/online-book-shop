@@ -79,6 +79,7 @@ function GenreBook() {
             const { id, image } = innerItem
             return (
               <div
+                data-aos='fade-up'
                 key={id}
                 className='genre-wrapper'
                 ref={(el) =>
@@ -87,12 +88,14 @@ function GenreBook() {
                   ] = el)
                 }
               >
-                <div className='main-img-container'>
+                <div data-aos='fade-up' className='main-img-container'>
                   <Link to={`/singlebook/${id}`}>
-                    <img src={image} alt='' />
+                    <img data-aos='fade-up' src={image} alt='' />
                   </Link>
                 </div>
-                <button className='main-btn'>Borrow</button>
+                <button data-aos='fade-up' className='main-btn'>
+                  Borrow
+                </button>
               </div>
             )
           })

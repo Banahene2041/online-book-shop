@@ -50,14 +50,25 @@ function RatedBooks() {
                 rated.map((outerItem) => {
                     return outerItem.map((innerItem) => {
                         const {id,title,subtitle,image,rating} = innerItem
-                        return <SplideSlide key={id} className='rating'>
-                            <div className="image-container">
-                                <Link to={`/singlebook/${id}`}><img src={image} alt="" /></Link>
+                        return (
+                          <SplideSlide key={id} className='rating'>
+                            <div data-aos='fade-up' className='image-container'>
+                              <Link to={`/singlebook/${id}`}>
+                                <img data-aos='fade-up' src={image} alt='' />
+                              </Link>
                             </div>
-                            <h6>{subtitle}</h6>
-                            <p>{title}</p>
-                            <h6><span className='rate'>rating</span><span className='rate-value'>: {rating.average.toFixed(3)}</span></h6>
-                        </SplideSlide>
+                            <h6 data-aos='fade-up'>{subtitle}</h6>
+                            <p data-aos='fade-up'>{title}</p>
+                            <h6 data-aos='fade-up'>
+                              <span data-aos='fade-up' className='rate'>
+                                rating
+                              </span>
+                              <span data-aos='fade-up' className='rate-value'>
+                                : {rating.average.toFixed(3)}
+                              </span>
+                            </h6>
+                          </SplideSlide>
+                        )
                     })
                 })
             }

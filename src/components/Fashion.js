@@ -51,12 +51,22 @@ function Fashion() {
         {
             fashion.map((outerBook) => {
                 return outerBook.map((innerBook) => {
-                    return <SplideSlide key={innerBook.id} className='book-item'>
-                        <div className="img-container">
-                            <Link to={`/singlebook/${innerBook.id}`}><img src={innerBook.image} alt="" /></Link>
+                    return (
+                      <SplideSlide key={innerBook.id} className='book-item'>
+                        <div data-aos='fade-up' className='img-container'>
+                          <Link to={`/singlebook/${innerBook.id}`}>
+                            <img
+                              data-aos='fade-up'
+                              src={innerBook.image}
+                              alt=''
+                            />
+                          </Link>
                         </div>
-                        <button className='borrow-btns'>Borrow</button>
-                    </SplideSlide>
+                        <button data-aos='fade-up' className='borrow-btns'>
+                          Borrow
+                        </button>
+                      </SplideSlide>
+                    )
                 })
             })
         }

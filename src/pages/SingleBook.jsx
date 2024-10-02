@@ -36,19 +36,43 @@ function SingleBook() {
   const name = authors.map((item) => item.name)
   return (
     <article className='single-section'>
-      <div className='error-container'><Link to="/" className='btn btn-primary'>back home</Link></div>
-      <div className='name'><h2>{name}</h2></div>
+      <div className='error-container'>
+        <Link to='/' className='btn btn-primary'>
+          back home
+        </Link>
+      </div>
+      <div className='name'>
+        <h2>{name}</h2>
+      </div>
       <div className='single-container'>
-        <div className="single-img">
-          <img src={image} alt="" />
+        <div className='single-img'>
+          <img data-aos='zoom-in' src={image} alt='' />
         </div>
-        <div className='singlebook-info'>
-        <p><span>Author :</span>{name}</p>
-        <p><span>Title</span>{title}</p>
-        <p><span>Isbn_10 :</span>{identifiers.isbn_10}</p>
-        <p><span>Public_date :</span>{publish_date}</p>
-        <p><span>Number_pages :</span>{number_of_pages}..</p>
-        <p><span>Subtitle :</span>{subtitle}</p>
+        <div data-aos='fade-up' className='singlebook-info'>
+          <p>
+            <span>Author :</span>
+            {name}
+          </p>
+          <p>
+            <span>Title</span>
+            {title}
+          </p>
+          <p>
+            <span>Isbn_10 :</span>
+            {identifiers.isbn_10}
+          </p>
+          <p>
+            <span>Public_date :</span>
+            {publish_date}
+          </p>
+          <p>
+            <span>Number_pages :</span>
+            {number_of_pages}..
+          </p>
+          <p>
+            <span>Subtitle :</span>
+            {subtitle}
+          </p>
         </div>
       </div>
     </article>
